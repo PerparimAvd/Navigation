@@ -99,12 +99,14 @@ class GameFragment : Fragment() {
                     } else {
                         // We've won!  Navigate to the gameWonFragment.
                         // Lorsque l'utilisateur réussi, on ouvre cette page de GameWon
-                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
+                        //view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
+                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
                     // Lorsque l'utilisateur échoue, on ouvre le game over
-                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment2)
+                    //view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment2)
+                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment())
                 }
             }
         }
